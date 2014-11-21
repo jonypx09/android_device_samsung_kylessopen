@@ -1,0 +1,16 @@
+CyanogenMod 11 device tree for the Samsung Galaxy Ace II x (GT-S7560M)
+
+How to compile (On Ubuntu 14.XX):
+
+1. Open terminal, create a new folder and "cd" into it.
+2. Type "repo init -u git://github.com/CyanogenMod/android.git -b cm-11.0" to initialize the repo.
+3. Copy the files from my "android_local_manifest" repo into "(CM directory)/.repo/local_manifests"
+4. Type "repo sync" and let the ~16GB code download (Find something to do, it will be a while)
+5. Check to make sure you followed the steps correctly. Go to "(CM directory)/device/samsung/kylessopen" and if this build tree is in there, you are ready to compile!
+6. Navigate to the main CM directory from within terminal and type "cd device/samsung/kylessopen && ./setup-makefiles.sh && cd ../../.. && cd vendor/cm &&  ./get-prebuilts && cd ../.. && . build/envsetup.sh && brunch kylessopen"
+7. Let it compile (Again, it will take a while)
+
+How to rebuild after modifying device tree:
+
+1. Naviage to the main CM directory from within terminal and type "repo sync && make clobber && cd device/samsung/kylessopen && ./setup-makefiles.sh && cd ../../.. && cd vendor/cm &&  ./get-prebuilts && cd ../.. && . build/envsetup.sh && brunch kylessopen"
+NOTE: "repo sync" updates the CM code to the latest; "make clobber" clears the build directory which is not necessary, but I reccomend it because sometimes make misses some changes, especially when modifying the device tree.
