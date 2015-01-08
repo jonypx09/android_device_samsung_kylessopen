@@ -35,7 +35,7 @@ ro.vendor.extension_library=/system/lib/libqc-opt.so
 rild.libpath=/system/lib/libril-qc-1.so
 rild.libargs=-d /dev/smd0
 ril.subscription.types=NV,RUIM
-#ro.telephony.ril_class=SamsungRIL
+ro.telephony.ril_class=SamsungRIL
 ro.telephony.call_ring.multiple=false
 ro.telephony.call_ring.delay=1000
 
