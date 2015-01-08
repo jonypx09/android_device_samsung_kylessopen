@@ -362,6 +362,10 @@ public class SamsungRIL extends RIL implements CommandsInterface {
         case RIL_UNSOL_SAMSUNG_UNKNOWN_MAGIC_REQUEST: ret = responseVoid(p); break;
         case RIL_UNSOL_SAMSUNG_UNKNOWN_MAGIC_REQUEST_2: ret = responseVoid(p); break;
         case RIL_UNSOL_AM: ret = responseString(p); break;
+        
+        case 1038: // RIL_UNSOL_DATA_NETWORK_STATE_CHANGED //
+            ret = responseVoid(p);
+            break;
 
         default:
             // Rewind the Parcel
