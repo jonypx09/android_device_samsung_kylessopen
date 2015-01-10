@@ -62,6 +62,11 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 TARGET_GLOBAL_CFLAGS += -DQCOM_DIRECTTRACK
 TARGET_GLOBAL_CPPFLAGS += -DQCOM_DIRECTTRACK
 
+#RIL
+
+BOARD_USES_LEGACY_RIL := true
+BOARD_RIL_CLASS := ../../../device/samsung/kylessopen/ril/
+
 # Graphics
 BOARD_EGL_CFG := device/samsung/kylessopen/prebuilt/system/lib/egl/egl.cfg
 USE_OPENGL_RENDERER := true
