@@ -2,6 +2,7 @@
 
 VENDOR=samsung
 DEVICE=kylessopen
+TARGET_KERNEL_CONFIG=cyanogenmod_kyle02_defconfig
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 

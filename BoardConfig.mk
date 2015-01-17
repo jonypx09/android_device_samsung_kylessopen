@@ -35,6 +35,7 @@ BOARD_USES_ADRENO_200 := true
 
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
+#TARGET_NO_RECOVERY   := true
 
 # Kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_kyle02_defconfig
@@ -61,6 +62,8 @@ BOARD_USES_QCOM_HARDWARE := true
 COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 TARGET_GLOBAL_CFLAGS += -DQCOM_DIRECTTRACK
 TARGET_GLOBAL_CPPFLAGS += -DQCOM_DIRECTTRACK
+
+#RIL
 
 # Graphics
 BOARD_EGL_CFG := device/samsung/kylessopen/prebuilt/system/lib/egl/egl.cfg

@@ -108,9 +108,11 @@ bin/playlpm
 lib/libqmiservices.so
 lib/libqmi.so
 lib/libqueue.so
+#lib/libsec-ril.so
 lib/libril-qc-1.so
 lib/libril-qc-qmi-1.so
 lib/libril-qcril-hook-oem.so
+#lib/libsecril-client.so
 lib/libwms.so
 lib/libwmsts.so
 lib/libfmradio_jni.so

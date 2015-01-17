@@ -8,9 +8,9 @@ $(call inherit-product, device/samsung/kylessopen/kylessopen.mk)
 PRODUCT_DEVICE := kylessopen
 PRODUCT_NAME := cm_kylessopen
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := GT-S7560M
+PRODUCT_MODEL := GT-S7562
 PRODUCT_MANUFACTURER := samsung
-PRODUCT_RELEASE_NAME := GT-S7560M
+PRODUCT_RELEASE_NAME := GT-S7562
 
 # Bootanimation
 TARGET_SCREEN_HEIGHT := 800
