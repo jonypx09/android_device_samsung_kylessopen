@@ -2,6 +2,9 @@
 # system.prop for kylessopen
 #
 
+# Audio
+lpa.min_duration=60000000
+
 # Bluetooth
 ro.bt.bdaddr_path=/data/misc/bluedroid/bdaddr
 
@@ -61,51 +64,3 @@ persist.sys.usb.config=mass_storage,adb
 
 # Wifi
 wifi.interface=wlan0
-
-ro.com.google.gmsversion=4.0_r6
-
-#
-# ADDITIONAL_BUILD_PROPERTIES
-#
-ro.rommanager.developerid=cyanogenmod
-ro.com.google.clientidbase=android-google
-keyguard.no_require_sim=true
-ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html
-ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html
-ro.com.android.wifi-watchlist=GoogleGuest
-ro.setupwizard.enterprise_mode=1
-ro.com.android.dateformat=MM-dd-yyyy
-ro.com.android.dataroaming=false
-ro.build.selinux=1
-persist.sys.dalvik.multithread=false
-persist.sys.dun.override=0
-persist.sys.root_access=1
-ro.cm.version=11-20141114-UNOFFICIAL-kylessopen
-ro.cm.releasetype=UNOFFICIAL
-ro.modversion=11-20141114-UNOFFICIAL-kylessopen
-ro.cmlegal.url=http://www.cyanogenmod.org/docs/privacy
-persist.sys.recovery_update=false
-ro.cm.display.version=11-20141114-UNOFFICIAL-kylessopen
-ro.config.notification_sound=Argon.ogg
-ro.config.alarm_alert=Hassium.ogg
-ro.config.ringtone=Orion.ogg
-persist.webview.provider=classic
-ro.config.low_ram=true
-ro.fm.analogpath.supported=true
-ro.fm.transmitter=false
-ro.fm.mulinst.recording.support=false
-ro.cwm.enable_key_repeat=true
-dalvik.vm.heapstartsize=5m
-dalvik.vm.heapgrowthlimit=48m
-dalvik.vm.heapsize=128m
-dalvik.vm.heaptargetutilization=0.75
-dalvik.vm.heapminfree=512k
-dalvik.vm.heapmaxfree=2m
-ro.carrier=unknown
-ro.ril.hsxpa=1
-ro.ril.gprsclass=10
-ro.adb.qemud=1
-persist.sys.dalvik.vm.lib=libdvm.so
-dalvik.vm.lockprof.threshold=500
-net.bt.name=Android
-dalvik.vm.stack-trace-file=/data/anr/traces.txt

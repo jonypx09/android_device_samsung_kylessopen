@@ -109,13 +109,21 @@ on boot
     chown system system /sys/devices/platform/msm_sdcc.3/polling
     chown system system /sys/devices/platform/msm_sdcc.4/polling
 
-    # QMUX deamon socket area
+    #Create QMUX deamon socket area
+    mkdir /dev/socket/radio 0770 radio radio
+    chmod 2770 /dev/socket/radio
+    mkdir /dev/socket/audio 0770 media audio
+    chmod 2770 /dev/socket/audio
+    #mkdir /dev/socket/bluetooth 0770 bluetooth bluetooth
+    #chmod 2770 /dev/socket/bluetooth
     mkdir /dev/socket/qmux_radio 0770 radio radio
     chmod 2770 /dev/socket/qmux_radio
     mkdir /dev/socket/qmux_audio 0770 media audio
     chmod 2770 /dev/socket/qmux_audio
-    mkdir /dev/socket/qmux_bluetooth 0770 bluetooth bluetooth
-    chmod 2770 /dev/socket/qmux_bluetooth
+    #mkdir /dev/socket/qmux_bluetooth 0770 bluetooth bluetooth
+    #chmod 2770 /dev/socket/qmux_bluetooth
+
+    setprop wifi.interface wlan0
 
     #RIL permissions
     chmod 660 /dev/oncrpc/30000000:f4fc28c3
