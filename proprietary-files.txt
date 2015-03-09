@@ -124,5 +124,3 @@ bin/hostapd
 etc/firmware/ath6k/AR6003/hw2.1.1/athtcmd_ram.bin
 etc/firmware/ath6k/AR6003/hw2.1.1/bdata.bin
 etc/firmware/ath6k/AR6003/hw2.1.1/fw-4.bin
-lib/modules/ath6kl_sdio.ko
-lib/modules/cfg80211.ko
