@@ -1,6 +1,3 @@
-# Bluetooth
-bin/hci_qcomm_init
-
 # Camera
 cameradata/datapattern_420sp.yuv
 cameradata/datapattern_front_420sp.yuv
