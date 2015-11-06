@@ -2,8 +2,8 @@
 # system.prop for kylessopen
 #
 
-# Bluetooth
-ro.bt.bdaddr_path=/data/misc/bluedroid/bdaddr
+# Audio
+lpa.min_duration=60000000
 
 # Call Recording
 persist.call_recording.enabled=1
@@ -34,10 +34,27 @@ ro.vendor.extension_library=/system/lib/libqc-opt.so
 # Telephony
 rild.libpath=/system/lib/libril-qc-1.so
 rild.libargs=-d /dev/smd0
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
-#ro.telephony.ril_class=SamsungRIL
 ro.telephony.call_ring.multiple=false
 ro.telephony.call_ring.delay=1000
+ro.ril.gprsclass=10
+ro.ril.hsxpa=1
+telephony.lteOnGsmDevice=false
+telephony.lteOnCdmaDevice=false
+
+persist.radio.multisim.config=dsds
+persist.dsds.enabled=true
+ro.multi.rild=false
+
 
 # USB
 persist.sys.usb.config=mass_storage,adb

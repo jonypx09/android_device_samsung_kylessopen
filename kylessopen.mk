@@ -10,17 +10,44 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/kylessopen/overlay
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
+PRODUCT_PACKAGES += \
+    libnetcmdiface \
+    libloc_api-rpc \
+    libqservice
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio_policy.msm7x27a \
     audio_policy.conf \
     libaudioutils \
-    audio.primary.msm7x27a
+    audio.primary.msm7x27a \
+    audio.usb.default \
+    libtinyalsa \
+    libdashplayer
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    btmac
+    bluetooth-headers \
+    hciconfig \
+    hciattach \
+    btmon \
+    btproxy \
+    bluetoothd-snoop \
+    btmgmt \
+    hcitool \
+    l2ping \
+    libsbc \
+    avinfo \
+    bccmd \
+    haltest \
+    libdbus \
+    audio.sco.default \
+    bluetoothd
+
+# Camera
+PRODUCT_PACKAGES += \
+   camera.msm7x27a
 
 # Device
 PRODUCT_PACKAGES += \
@@ -76,7 +103,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     
 #Optimization for low-memory devices
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.low_ram=true 
+    ro.config.low_ram=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+   media.stagefright.enable-player=true \
+   media.stagefright.enable-meta=false \
+   media.stagefright.enable-scan=true \
+   media.stagefright.enable-http=true \
+   media.stagefright.enable-fma2dp=true \
+   media.stagefright.enable-aac=true \
+   media.stagefright.enable-qcp=true
 
 # Hardware features available on this device
 PRODUCT_COPY_FILES += \
@@ -97,16 +133,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/kylessopen/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
     device/samsung/kylessopen/recovery/postrecoveryboot.sh:recovery/system/bin/postrecoveryboot.sh
-
-# FM
-PRODUCT_COPY_FILES += \
-    device/samsung/kylessopen/prebuilt/system/etc/init.qcom.fm.sh:/system/etc/init.qcom.fm.sh
-
-# FM Config
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.fm.analogpath.supported=true \
-    ro.fm.transmitter=false \
-    ro.fm.mulinst.recording.support=false
     
 # Enable repeatable keys in CWM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -119,4 +145,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_kylessopen
 PRODUCT_DEVICE := kylessopen
 PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := GT-S7560M
+PRODUCT_MODEL := GT-S7562
